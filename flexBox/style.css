@@ -1,0 +1,32 @@
+/* navigator */
+nav{
+    display: flex;
+}
+nav>.logo{  
+    background-color: firebrick;
+    flex: auto;
+    width: 100px;
+}
+nav>.menu{/*>是階層選擇器, 代表要在 <main> 標籤底下的 .item 才會套用樣式。*/
+    background-color: palegreen;
+    flex: auto;
+    width: 100px;
+}
+nav>.user{
+    background-color: firebrick;
+    flex: auto;
+    width: 100px;
+}
+/*main 樣式設定*/
+main{/*容器*/
+    display: flex; /*讓區塊並排*/
+    justify-content: center;/*讓區塊至中*/
+    background-color: gold;
+    align-items: center;
+}
+main>.item{/*項目*/
+    background-color:plum;
+     flex: none; /*代表沒辦法自動縮放*/
+    width: 300px;
+    margin: 10px;
+}

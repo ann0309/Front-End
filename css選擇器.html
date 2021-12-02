@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <title>CSS選擇器</title>
+        <style type="text/css">
+            /* 標籤名稱選擇器
+                例如body
+            */
+            body{/*對body標籤作用*/
+                font-size: 16px;
+                font-family: 微軟正黑體;
+            }
+            h3{/*對所有h3標籤作用*/
+                font-size: 20px;
+                text-decoration: underline;
+            }
+            /* class 選擇器 
+                重要!
+                前面有加.
+                也可以結合標籤。例如div.content或ul.content
+            */
+            .content{ 
+                padding: 10px; 
+                border: 1px
+                dashed #888888;
+            }
+            /* id 選擇器 */
+            #btn{
+                border: 1px solid #888888;
+                background-color: bisque;
+            }
+            
+            /* 虛擬 選擇器
+                搭配其他選擇器使用
+                可以讓物件在特定時間做特定的事情
+                第一種 :  :hover 當滑鼠移到目標上時上,套用一種設定動作
+                第二種 :  :focus 當目標取得焦點(可能是把游標移到textbox上之類的, 特定選取)時, 套用一種動作
+            */
+            #btn:hover{
+                /* 標籤選擇器搭配虛擬選擇器 */
+                background-color: cornflowerblue;
+            }
+            input:focus{
+                /* 標籤選擇器搭配虛擬選擇器 */
+                border: 2px solid #ff0000;
+            }
+            /* 階層 選擇器 
+                搭配其他選擇器使用
+            */
+            .favorite a{
+                /* favorite這個東西裡面的超連結 */
+                color: olive;
+            }
+            .learn a{
+                color: forestgreen;
+            }
+        </style> 
+        
+    </head>
+    <body>
+        <h3>我的自我介紹</h3>
+        <div class="content">摸西摸西, 我是佳恩恩</div>
+        <ul class="learn">
+            <li><a href="https://www.youtube.com/watch?v=L-iYOmU63IE&list=PL-g0fdC5RMbpqZ0bmvJTgVTS4tS3txRVp">我現在在學前端</a></li>
+        </ul>
+
+        <ul class="favorite">
+            <li><a href="https://kortw.com/view/379_1_7.html">我喜歡打網球</a></li>
+        </ul>
+            <div class="content">
+            填寫訊息<input type="text" /><button id="btn">送出</button>
+        </div>
+    </body>
+    </html> 

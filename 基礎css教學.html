@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <title>CSS教學</title>
+        <style type="text/css">
+        /* 1. css選擇器, 這樣就不用在每個div裡加上style會很雜亂 
+            2. 一組css被一個大括號包著
+            3. css選擇器: .樣式名字
+        */
+            .title{
+                    font-weight:bold;
+                    font-size:20px}
+            .os{
+                    color: cadetblue;}
+            .mood{
+                    padding: 10px;
+                    margin-top: 50px;
+                    border: indianred solid 2px;
+                    width: 200px;}
+            .box{
+                    /* position: absolute;left: 200px;right: 200px;  固定在頁面的同一個位置,也有相對定位可以用*/
+                    width: 20px;
+                    height: 20px;
+                    background-color: lightpink;
+                    /* 是background-color而不是color歐! */
+            }
+        </style> 
+        
+    </head>
+    <body>
+        <div class="title">whyyyyy</div>
+    <!-- ="屬性:設定值
+        ;為分割不同設定值
+        " 
+        為div加上style,這個區塊的所有文字都給指定的style
+    -->
+        <div class="mood">我想回家rrr<div class="os" >ㄚㄚㄚ</div></div>
+        
+        <!-- div是一個區塊 , 要解決因為div而出現不同行的狀況時, 可以用span-->
+        <div class="mood">我想回家rrr<span class="os">ㄚㄚㄚ</span></div>
+        
+        <!-- border要加上solid線的樣式(solid)，不然不會顯示 
+            padding:字外面, 線裡面的那個空間
+            width:改變div區塊的寬度(不設定的話就是整個版面的寬度)
+            寬度和高度只能設定在區塊式標籤(div),不能設定在行內標籤(span)
+        -->
+        <div class="box"></div>
+
+        <div class="mood">我想睡覺<div>逼啵啵逼</div></div>
+        
+        <!-- div是一個區塊 , 要解決因為div而出現不同行的狀況時, 可以用span-->
+        <div class="mood">別鬧了<span>rrrrrrrrrrrrrrrrr</span></div>
+    </body>
+    </html> 

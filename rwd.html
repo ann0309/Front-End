@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximun-scale=1"></meta>
+        <!-- meta標籤 
+            希望手機瀏覽器不要對網頁做任意地縮放
+            縮放程度固定在1倍(initial-scale )
+            最大縮放尺度 maximun-scale
+        -->
+        <title>回應式設計</title>
+        <style type="text/css">
+        .head{
+            font-size: 30px;
+            padding: 10px;
+            text-align: center;
+        }
+        div{
+            background-color: bisque;
+            color: cornflowerblue;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;/*讓文字至中*/
+        }
+        .content{
+            width:1000px;
+            margin-left: auto;
+            margin-right: auto;
+            /**設auto會讓這個區塊被放在父親區塊的中間*/
+            /* border: hotpink 1px solid;
+            height: 100px; */
+            
+        }
+        .box{
+            width:280px;
+            padding: 10px;
+            margin: 10px;  
+            height: 150px;
+            line-height: 30px;         
+            background-color: brown;
+            vertical-align: top;
+            display: inline-block;/* 讓三個格子排在同一排 */
+            
+        }
+        /* css media query */
+        
+        /* 當使用者使用螢幕且使用者螢幕寬度為600px 則套用此設定 
+        從大螢幕轉換到小螢幕, 因為寬度不夠而讓block往下掉
+        */
+        @media screen and(max-width:600px){
+            /*判斷使用者是否使用手機 */
+            .content{width: 100%;text-align: center;}
+            .head{font-size: 24px;}
+        }
+        </style> 
+        
+    </head> 
+    <body style="margin: 0px;background-color: gainsboro;">
+        <!-- 設margin會讓body區塊和網頁之間的空白消失 -->
+        <div class="head">佳恩恩自我介紹</div>
+        <div>
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </body>
+    </html> 
